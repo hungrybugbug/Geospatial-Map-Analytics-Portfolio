@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_efb2ff61b627e987ed6d9f58b2dd9db7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_efb2ff61b627e987ed6d9f58b2dd9db7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_efb2ff61b627e987ed6d9f58b2dd9db7 = L.map(
+                "map_efb2ff61b627e987ed6d9f58b2dd9db7",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_97e9a478ee3041d4c6ffe7380734428a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_97e9a478ee3041d4c6ffe7380734428a.addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            var tile_layer_2b7596d8e75ada6818c001a0f5b9d5c3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2b7596d8e75ada6818c001a0f5b9d5c3.addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            var tile_layer_061c94fda61a16228b96b239b9d795cc = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_061c94fda61a16228b96b239b9d795cc.addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            var circle_marker_0eb73b46a29f97f84e76528944b7e6ae = L.circleMarker(
+                [33.64, -84.42],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.732132722552272, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_0eb73b46a29f97f84e76528944b7e6ae.bindTooltip(
+                `<div>
+                     <b>Atlanta (ATL)</b><br>110M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ff8a9f3c5d5f846df7aa066cfaba845 = L.circleMarker(
+                [40.08, 116.58],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_8ff8a9f3c5d5f846df7aa066cfaba845.bindTooltip(
+                `<div>
+                     <b>Beijing (PEK)</b><br>100M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_133f0ea63d8a3d4739ea01c2e2f27071 = L.circleMarker(
+                [25.25, 55.36],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.150971698084906, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_133f0ea63d8a3d4739ea01c2e2f27071.bindTooltip(
+                `<div>
+                     <b>Dubai (DXB)</b><br>89M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ec668b16a18f4b9febd9930af870257 = L.circleMarker(
+                [33.94, -118.4],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.071247279470288, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_9ec668b16a18f4b9febd9930af870257.bindTooltip(
+                `<div>
+                     <b>Los Angeles (LAX)</b><br>88M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ed89bf951a70bb5a40e8ff843c4cea4 = L.circleMarker(
+                [35.55, 139.77],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.991068579633223, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_9ed89bf951a70bb5a40e8ff843c4cea4.bindTooltip(
+                `<div>
+                     <b>Tokyo (HND)</b><br>87M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_79531e2d9c40fdf42a8644f53a1d7a9e = L.circleMarker(
+                [41.98, -87.9],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.665650368716449, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_79531e2d9c40fdf42a8644f53a1d7a9e.bindTooltip(
+                `<div>
+                     <b>Chicago (ORD)</b><br>83M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbb5408b99c2cdc96eaa2a58ac21156f = L.circleMarker(
+                [51.47, -0.45],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.416407864998739, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_cbb5408b99c2cdc96eaa2a58ac21156f.bindTooltip(
+                `<div>
+                     <b>London (LHR)</b><br>80M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f5c3a9b62301ab508cf760589f0c99a = L.circleMarker(
+                [31.14, 121.8],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.076696830622023, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_1f5c3a9b62301ab508cf760589f0c99a.bindTooltip(
+                `<div>
+                     <b>Shanghai (PVG)</b><br>76M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70ee203cd53583edabb4a9c0c0b9ee8e = L.circleMarker(
+                [49.0, 2.54],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.076696830622023, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_70ee203cd53583edabb4a9c0c0b9ee8e.bindTooltip(
+                `<div>
+                     <b>Paris (CDG)</b><br>76M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c478583dac2aae4754eeda93958860d = L.circleMarker(
+                [32.89, -97.04],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.99038105676658, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_2c478583dac2aae4754eeda93958860d.bindTooltip(
+                `<div>
+                     <b>Dallas (DFW)</b><br>75M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3686d3c25fe5f9e1ea5e8332211f56fa = L.circleMarker(
+                [52.3, 4.76],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.639224659764539, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_3686d3c25fe5f9e1ea5e8332211f56fa.bindTooltip(
+                `<div>
+                     <b>Amsterdam (AMS)</b><br>71M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_556f5bd20b62dc42aa497b45efb7515e = L.circleMarker(
+                [50.03, 8.57],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.549900398011133, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_556f5bd20b62dc42aa497b45efb7515e.bindTooltip(
+                `<div>
+                     <b>Frankfurt (FRA)</b><br>70M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31eaa67ca1c36d34e6035b38547c72a2 = L.circleMarker(
+                [41.27, 28.72],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.36931687685298, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_31eaa67ca1c36d34e6035b38547c72a2.bindTooltip(
+                `<div>
+                     <b>Istanbul (IST)</b><br>68M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a88ff7b3d2bd6621c5ec136c94fcf1a = L.circleMarker(
+                [23.39, 113.29],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.093386622447824, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_6a88ff7b3d2bd6621c5ec136c94fcf1a.bindTooltip(
+                `<div>
+                     <b>Guangzhou (CAN)</b><br>65M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72f9e9dbd5dc3e12dbdede997cb6fa24 = L.circleMarker(
+                [40.64, -73.77],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.811011811017718, "stroke": true, "weight": 3}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+        
+    
+            circle_marker_72f9e9dbd5dc3e12dbdede997cb6fa24.bindTooltip(
+                `<div>
+                     <b>New York (JFK)</b><br>62M Passengers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_98c94425c72059f1185d3872305350df_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_97e9a478ee3041d4c6ffe7380734428a,
+                    "Standard Map" : tile_layer_2b7596d8e75ada6818c001a0f5b9d5c3,
+                    "Dark Mode" : tile_layer_061c94fda61a16228b96b239b9d795cc,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_98c94425c72059f1185d3872305350df = L.control.layers(
+                layer_control_98c94425c72059f1185d3872305350df_layers.base_layers,
+                layer_control_98c94425c72059f1185d3872305350df_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_efb2ff61b627e987ed6d9f58b2dd9db7);
+
+        
+</script>
+</html>
